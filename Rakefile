@@ -38,6 +38,8 @@ task :environment do
 end
 
 task :sitemap => :environment do
+  count = 0
+
   sitemap = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 <urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">
    <url>
@@ -54,6 +56,7 @@ task :sitemap => :environment do
        <lastmod>#{Time.now.strftime("%Y-%m-%d")}</lastmod>
        <changefreq>always</changefreq>
     </url>\n"
+      count += 1
     end
   end
   
@@ -63,5 +66,5 @@ task :sitemap => :environment do
     f.write(sitemap)
   end
   
-  puts "Generated successfully"
+  puts "Generated successfully with #{count} total combinations"
 end
