@@ -15,9 +15,9 @@ end
 helpers do
   def a_or_an(phrase)
     if %w{a e i o u}.include? phrase.downcase[0..0]
-      "An"
+      "an"
     else
-      "A"
+      "a"
     end
   end
 end
