@@ -1,3 +1,5 @@
 = Randomly Insult Me
 
-A website inspired by a Reddit post
+A website inspired this Reddit post
+
+http://www.reddit.com/r/pics/comments/doezr/random_insult_generator_maybe_nsfw/
