@@ -51,6 +51,12 @@ a:hover {
 	font-weight: bold;
 }
 
+#insult .again {
+  padding-top: 9%;
+	font-size: 0.3em;
+	font-weight: normal;
+}
+
 #footer {
   padding: 0;
   margin: 0;
