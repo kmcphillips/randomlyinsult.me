@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title Randomly Insult Me
+    %link{:href => '/stylesheet.css', :rel => 'stylesheet', :type => 'text/css'}
+  %body
+    #container
+      #insult= yield
+      .push
+    #footer
+      %p
+        %a{:href => "mailto:please@randomlyinsult.me"} please@randomlyinsult.me
+        &mdash;
+        %a{:href => "http://github.com/kimos/randomlyinsult.me"} Source on GitHub
