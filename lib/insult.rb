@@ -1,6 +1,6 @@
 class Insult
-  PREFIXES = %w{Ass Jack Dill Turd Cock Twat Fart Booger Splooge Nut Douche Poon Queef Cunt Wank Butt Wang}
-  POSTFIXES = %w{Hat Wagon Roger Troll Sniffer Gnome Inspector Waffle Fairy Wad Master Peddler Weasel Taco Sack Receptacle Pilot Dumpster Pile Goblin Captain Face Pie}
+  PREFIXES = %w{Ass Jack Dill Turd Cock Twat Fart Booger Splooge Nut Douche Poon Queef Cunt Wank Butt Wang Bitch}
+  POSTFIXES = %w{Hat Wagon Roger Troll Sniffer Gnome Inspector Waffle Fairy Wad Master Peddler Weasel Taco Sack Receptacle Pilot Dumpster Pile Goblin Captain Face Pie Tard Head Licker Brain}
   
   attr_accessor :prefix, :postfix
 
