@@ -19,6 +19,11 @@
       .push
     #footer
       %p
+        - if request.fullpath == "/"
+          %a{:href => @insult.link} Permalink
+        - else
+          %a{:href => "/"} Random
+        &mdash;
         %a{:href => "mailto:please@randomlyinsult.me"} please@randomlyinsult.me
         &mdash;
         %a{:href => "http://github.com/kimos/randomlyinsult.me"} Source on GitHub

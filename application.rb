@@ -27,3 +27,9 @@ get '/' do
   @insult = Insult.generate
   haml :index
 end
+
+get '/:prefix/:postfix' do
+  @insult = Insult.new(params[:prefix], params[:postfix])
+  haml :index
+end
+
