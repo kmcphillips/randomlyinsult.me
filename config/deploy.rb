@@ -29,10 +29,10 @@ namespace :deploy do
 end
 
 ## Symlink the production database and seed
-after "deploy", "symlink_shared_files"
+#after "deploy", "symlink_shared_files"
 
 task :symlink_shared_files do
-  run "ln -s #{shared_path}/log #{release_path}/log"
+  #run "ln -s #{shared_path}/log #{release_path}/log"
 end
 
 ## restart the app
