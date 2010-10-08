@@ -2,7 +2,13 @@
 %html
   %head
     %title Randomly Insult Me
+
+    %meta{:name => "description", :content => "Randomly Insult Me. An insult generator."}
+    %meta{:name => "keywords", :content => "randomly, random, insult me, insult, insult generator, random insult, reddit, #{Insult::PREFIXES.join(", ")}, #{Insult::POSTFIXES.join(", ")}"}
+    %meta{:name => "robots", :content => "index, follow"}
+
     %link{:href => '/stylesheet.css', :rel => 'stylesheet', :type => 'text/css'}
+
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-18310332-2']);
@@ -13,6 +19,7 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+
   %body
     #container
       #insult= yield

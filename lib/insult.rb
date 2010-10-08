@@ -14,11 +14,18 @@ class Insult
   end
 
   def link
-    "/#{prefix}/#{postfix}"
+    if PREFIXES[prefix] && POSTFIXES[postfix]
+      "/#{prefix}/#{postfix}"
+    else
+      "/"
+    end
   end
 
   def to_s
-    "#{PREFIXES[prefix]} #{POSTFIXES[postfix]}"
+    if PREFIXES[prefix] && POSTFIXES[postfix]
+      "#{PREFIXES[prefix]} #{POSTFIXES[postfix]}"
+    else
+      "error"
+    end
   end
 end
-

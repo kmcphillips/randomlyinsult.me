@@ -36,3 +36,32 @@ end
 task :environment do
   require 'environment'
 end
+
+task :sitemap => :environment do
+  sitemap = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">
+   <url>
+      <loc>http://randomlyinsult.me/</loc>
+      <lastmod>#{Time.now.strftime("%Y-%m-%d")}</lastmod>
+      <changefreq>always</changefreq>
+      <priority>0.8</priority>
+   </url>\n"
+  
+  Insult::PREFIXES.each_with_index do |obj, index_pre|
+    Insult::POSTFIXES.each_with_index do |obj, index_post|
+      sitemap << "    <url>
+       <loc>http://randomlyinsult.me/#{index_pre}/#{index_post}</loc>
+       <lastmod>#{Time.now.strftime("%Y-%m-%d")}</lastmod>
+       <changefreq>always</changefreq>
+    </url>\n"
+    end
+  end
+  
+  sitemap << "\n</urlset>"
+  
+  File.open('public/sitemap.xml', 'w') do |f|
+    f.write(sitemap)
+  end
+  
+  puts "Generated successfully"
+end
