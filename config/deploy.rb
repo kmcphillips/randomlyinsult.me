@@ -7,7 +7,7 @@ set :keep_releases, 6
 
 ## Configure source control
 set :scm, "git"
-set :repository,  "git://github.com/kimos/randomlyinsult.me.git"
+set :repository,  "git://github.com/kmcphillips/randomlyinsult.me.git"
 set :branch, "master"
 set :deploy_via, :checkout
 set :git_shallow_clone, 1
