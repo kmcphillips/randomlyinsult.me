@@ -1,6 +1,8 @@
+require "rvm/capistrano"
+
 ## Deployment config for production
 set :application, "Randomly Insult Me"
-set :deploy_to, "/var/www/kevin/data/www/randomlyinsult.me"
+set :deploy_to, "/home/kevin/randomlyinsult.me"
 set :user, "kevin"
 set :use_sudo, false
 set :keep_releases, 6
@@ -16,8 +18,8 @@ set :git_shallow_clone, 1
 default_run_options[:pty] = true
 
 ## Role for production
-role :web, "68.169.58.121"
-role :app, "68.169.58.121"
+role :web, "198.211.110.159"
+role :app, "198.211.110.159"
 
 ## Tasks for deploying to Apache Passenger
 namespace :deploy do
